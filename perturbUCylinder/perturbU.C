@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
     );
 
     // Check U exists
-    if (Uheader.headerOk())
+    if (Uheader.typeHeaderOk<IOdictionary>(true))
     {
         Info<< "    Reading U" << endl;
         volVectorField U(Uheader, mesh);
